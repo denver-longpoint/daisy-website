@@ -2,3 +2,6 @@ node_modules/
 dist/
 .DS_Store
 .astro/
+
+# duplicate/manual copies not needed on the live site
+public/images/gallery/

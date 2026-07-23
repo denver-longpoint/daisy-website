@@ -29,4 +29,5 @@ export const NAV = [
     ],
   },
   { label: 'News & Blog', href: '/daisy-cottage-news' },
+  { label: 'Photos & Video', href: '/photos-video' },
 ];

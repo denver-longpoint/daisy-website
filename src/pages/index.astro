@@ -19,12 +19,6 @@ const amenities = [
   'Freshly laundered bed linens included in your stay',
   'New outdoor rinsing station!',
 ];
-const sunsetCollection = [
-  'Cape Cod Sunset.png', 'Cape Cod Sunsets.png', 'Days Cottages Sunset.png',
-  'North Truro Beach Sunset.png', 'North Truro Sunet.png', 'Sunset Over Cape Cod.png',
-  'Sunset OVer Provincetown.png', 'Summer Evening Daisy Cottage.png', 'Seagull flying by the camera.jpg',
-];
-const storms = ['Stormy Cape Cod.png', 'Lightning over Cape Cod.png'];
 ---
 <Base title={title} description={description} image="/images/Aerial View of Beach Point.JPG">
 
@@ -137,21 +131,6 @@ const storms = ['Stormy Cape Cod.png', 'Lightning over Cape Cod.png'];
       <div class="webcam-embed">
         <iframe title="Cape Cod Sunset Webcam" src="https://video.nest.com/embedded/live/l7WlTqqejq?autoplay=1" frameborder="0" allowfullscreen loading="lazy"></iframe>
       </div>
-      <h3 class="mt">Daisy Cottage Sunset Collection</h3>
-    </div>
-    <div class="container gallery-grid">
-      {sunsetCollection.map((f) => <img src={`/images/${f}`} alt={f.replace(/\.[^.]+$/, '')} loading="lazy" />)}
-    </div>
-    <div class="container">
-      <h3 class="mt">Storms over the bay</h3>
-    </div>
-    <div class="container gallery-2">
-      {storms.map((f) => <img src={`/images/${f}`} alt={f.replace(/\.[^.]+$/, '')} loading="lazy" />)}
-    </div>
-    <div class="container video-grid">
-      <div class="vid"><iframe src="https://www.youtube.com/embed/TvCIajSjrwQ" title="Provincetown Thunderstorm Timelapse" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/jxbFy6Azn90" title="Lightning Storm over Provincetown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
-      <div class="vid"><iframe src="https://www.youtube.com/embed/gHjzwAmh0BA" title="Summer Storm over Cape Cod Bay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
     </div>
   </section>
 
