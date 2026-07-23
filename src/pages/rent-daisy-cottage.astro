@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site.js';
+const title = 'Rental Rates — Daisy Cottage | Cape Cod Vacation Rental';
+const description = 'Rental rates for Daisy Cottage, one of the historic Days’ Cottages on Beach Point in North Truro, Cape Cod.';
+// NOTE: these are the 2021 rates carried over from Squarespace — Denver to refresh.
+const rates = [
+  ['March - Mother’s Day', '$240/night'],
+  ['May 9 - May 28', '$285/night'],
+  ['May 29 - June 19', '$320/night'],
+  ['June 20 - Sept 6', '$350/night'],
+  ['Sept 7 - Sept 30', '$320/night'],
+  ['October', '$285/night'],
+  ['November', '$240/night'],
+];
+---
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1>Rental Rates</h1>
+      <p>Interested in booking Daisy Cottage?</p>
+      <p>The best way to book the cottage is through Airbnb, but if you&rsquo;d prefer to book with us directly, feel free to contact us at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      <h2 class="mt">Daisy &amp; Days&rsquo; Cottages Rental Rates</h2>
+      <table class="rates">
+        <tbody>
+          {rates.map(([period, price]) => <tr><td>{period}</td><td>{price}</td></tr>)}
+        </tbody>
+      </table>
+      <p class="text-center" style="margin-top:2rem">
+        <a class="btn" href={SITE.airbnb} target="_blank" rel="noopener">Book Through Airbnb</a>
+      </p>
+    </div>
+  </section>
+</Base>
+<style>
+  h2.mt{margin-top:2.5rem}
+  .rates{border-collapse:collapse;width:100%;max-width:560px;font-family:var(--font-body)}
+  .rates td{padding:0.7rem 0.5rem;border-bottom:1px solid var(--color-line)}
+  .rates td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+</style>

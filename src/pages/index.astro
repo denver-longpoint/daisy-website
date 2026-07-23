@@ -1,0 +1,183 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site.js';
+
+const title = 'Daisy Cottage | Cape Cod Vacation Rental';
+const description = 'Daisy Cottage is a historic Days’ Cottage vacation rental on Beach Point in North Truro, Cape Cod — private beach, bay views, and minutes from Provincetown.';
+
+const availability = ['Sept 12-19', 'Sept 26 - Oct 2'];
+const amenities = [
+  'Renovated kitchen with induction stovetop and gas oven',
+  'Larger bathroom with tile shower, glass door, and continuous hot water',
+  'Back bedroom now has double-size bed',
+  'Middle bedroom has a double-size bunkbed',
+  'Wifi - Bring your own tv and log in to your favorite streaming services',
+  '4-cup coffee maker',
+  'Large Refrigerator',
+  'A living room with a comfortable pull-out futon',
+  'Five large windows that overlook the bay toward Provincetown',
+  'Freshly laundered bed linens included in your stay',
+  'New outdoor rinsing station!',
+];
+const sunsetCollection = [
+  'Cape Cod Sunset.png', 'Cape Cod Sunsets.png', 'Days Cottages Sunset.png',
+  'North Truro Beach Sunset.png', 'North Truro Sunet.png', 'Sunset Over Cape Cod.png',
+  'Sunset OVer Provincetown.png', 'Summer Evening Daisy Cottage.png', 'Seagull flying by the camera.jpg',
+];
+const storms = ['Stormy Cape Cod.png', 'Lightning over Cape Cod.png'];
+---
+<Base title={title} description={description} image="/images/Aerial View of Beach Point.JPG">
+
+  <!-- HERO -->
+  <!-- Hero photo — swap this filename for any image in /public/images to change the hero -->
+  <section class="hero photoband" style="background-image:url('/images/writers-retreat-cape-cod-ma.jpeg')">
+    <div class="hero__inner">
+      <h1 class="photoband__title">Daisy Cottage</h1>
+      <p class="hero__subtitle">Cottage #1 of Truro&rsquo;s iconic Days&rsquo; Cottages.</p>
+      <a class="btn" href="#book">Book Your Stay</a>
+    </div>
+  </section>
+
+  <!-- AVAILABILITY -->
+  <section class="section text-center">
+    <div class="container">
+      <h2>We still have availability for 2026!</h2>
+      <p>The following days/weeks are currently available to book Daisy Cottage.</p>
+      <ul class="avail">
+        {availability.map((d) => <li>{d}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- BOOK BUTTONS -->
+  <section id="book" class="section--tight text-center">
+    <div class="container stack-btns">
+      <a class="btn" href="/reserve-the-cottage">Book Directly</a>
+      <a class="btn" href={SITE.airbnb} target="_blank" rel="noopener">Book Through Airbnb</a>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+      <h2>Daisy Cottage is vacation rental in North Truro, Massachusetts</h2>
+      <p>Daisy Cottage is one of the historic Days&rsquo; Cottages located on Beach Point between Provincetown and North Truro. Enjoy your own private beach with wide-open views of historic Cape Cod Bay and the unique skyline of Provincetown across the harbor.</p>
+      <h2 class="mt">Available as a weekly rental during the summer months!</h2>
+      <p>The cottage is now available to rent during the off-season, including winter. If you&rsquo;re interested in renting Daisy for a long-term off-season rental, such as November-April, please let us know as soon as possible.</p>
+    </div>
+  </section>
+
+  <!-- AMENITIES BAND -->
+  <section id="amenities" class="photoband" style="background-image:url('/images/Daisy Cottage Contact Us.png')">
+    <h2 class="photoband__title">Amenities</h2>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>A Truro vacation rental with all the amenities!</h2>
+      <p>Daisy Cottage has had some recent interior renovations. The only thing things that didn&rsquo;t change are the view of the bay and the colorful paintings on the chimney.</p>
+      <p><strong>Here are some of the new features of the cottage:</strong></p>
+      <ul class="features">
+        {amenities.map((a) => <li>{a}</li>)}
+      </ul>
+      <p>Guests of the cottage have their own private beach with access to a community boat launch on the north end. For the enjoyment (and sanity) of other other guests jet skis are <strong>not</strong> allowed.</p>
+    </div>
+    <div class="container gallery-2">
+      <img src="/images/IMG_1070 copy.JPG" alt="Daisy Cottage renovated kitchen" loading="lazy" />
+      <img src="/images/IMG_1079 copy.JPG" alt="Daisy Cottage living room" loading="lazy" />
+    </div>
+    <div class="container">
+      <img class="fullbleed" src="/images/Aerial View of Beach Point.JPG" alt="Aerial view of Days' Cottages on Beach Point at sunset" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- PROVINCETOWN BAND -->
+  <section id="provincetown" class="photoband" style="background-image:url('/images/beautiful-provincetown-sunset.png')">
+    <h2 class="photoband__title">Provincetown</h2>
+  </section>
+
+  <section class="section text-center">
+    <div class="container">
+      <h2>Close to Provincetown&hellip;with a little breathing space</h2>
+      <p>Enjoy all that Provincetown has to offer, but with a little peace and quiet when you&rsquo;ve had enough.</p>
+      <p>You're less than a 10-minute drive to MacMillan Pier and Town Square. If you'd prefer to ride your bike and avoid parking, it's only a flat 4-mile bike ride along Shore Road and 6A.</p>
+      <p>And North Truro is in the opposite direction on Shore Road&hellip;only a few minutes away. Terra Luna and Captains Choice restaurants serve delicious food.</p>
+      <p>The new owners at <strong>Days&rsquo; Market and Deli</strong> just across the street make delicious sandwiches, serve Lewis Brothers ice cream, and have a great selection of beer and wine. They also have hot coffee available all day as well as other vacation essentials.</p>
+    </div>
+    <div class="container">
+      <iframe class="map" title="Map to Days' Cottages, North Truro" src="https://www.google.com/maps?q=Days+Cottages+North+Truro+MA&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container text-center">
+      <h2>Sign up for last-minute deals</h2>
+      <p>Occasionally we have last-minute deals on the cottage. If you&rsquo;re the spontaneous type and think you&rsquo;d ever come out to the Cape on a whim, let us know your email address.</p>
+      <form name="last-minute-deals" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter__form">
+        <input type="hidden" name="form-name" value="last-minute-deals" />
+        <p class="hidden"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
+        <input type="text" name="First Name" placeholder="First Name" aria-label="First Name" />
+        <input type="text" name="Last Name" placeholder="Last Name" aria-label="Last Name" />
+        <input type="email" name="Email" placeholder="Email Address" aria-label="Email Address" required />
+        <button type="submit" class="btn btn--light">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WEBCAM + SUNSET COLLECTION -->
+  <section id="webcam" class="section text-center">
+    <div class="container">
+      <h2>Cape Cod Sunset Webcam</h2>
+      <p>Watch the sun set over Provincetown Harbor toward Long Point Lighthouse and the Pilgrim Monument, live from Beach Point.</p>
+      <!-- TODO: paste the live webcam embed here (YouTube/other <iframe>). Placeholder collection below. -->
+      <h3 class="mt">Daisy Cottage Sunset Collection</h3>
+    </div>
+    <div class="container gallery-grid">
+      {sunsetCollection.map((f) => <img src={`/images/${f}`} alt={f.replace(/\.[^.]+$/, '')} loading="lazy" />)}
+    </div>
+    <div class="container">
+      <h3 class="mt">Storms over the bay</h3>
+    </div>
+    <div class="container gallery-2">
+      {storms.map((f) => <img src={`/images/${f}`} alt={f.replace(/\.[^.]+$/, '')} loading="lazy" />)}
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .hero { min-height: clamp(460px, 78vh, 760px); }
+  .hero__inner { position: relative; text-align: center; padding-inline: 1rem; }
+  .hero__subtitle {
+    color: #fff; font-style: italic; text-transform: uppercase; letter-spacing: 0.14em;
+    font-size: clamp(0.8rem, 1.6vw, 1.05rem); margin: 0.5rem 0 2rem;
+  }
+  .avail { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+  .avail li { font-weight: 600; font-family: var(--font-body); margin: 0.4rem 0; }
+  .stack-btns { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
+  h2.mt, h3.mt { margin-top: 2.5rem; }
+  .features { padding-left: 1.2rem; }
+  .features li, .avail li { line-height: 1.7; }
+  .gallery-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .gallery-2 img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+  .fullbleed { width: 100%; margin-top: 1rem; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+  .map { width: 100%; height: 420px; border: 0; margin-top: 1rem; }
+  .newsletter { background: var(--color-steel); color: #fff; padding-block: clamp(3rem, 7vw, 5rem); }
+  .newsletter h2 { color: #fff; }
+  .newsletter__form { display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 0; max-width: 1000px; margin: 2rem auto 0; }
+  .newsletter__form input { border: 0; padding: 1.1rem 1.2rem; font-family: var(--font-body); font-size: 1rem; }
+  .btn--light { background: #fff; color: var(--color-heading); border: 0; cursor: pointer; }
+  .btn--light:hover { background: #eee; color: #000; }
+  .hidden { display: none; }
+  @media (max-width: 760px) {
+    .gallery-2 { grid-template-columns: 1fr; }
+    .newsletter__form { grid-template-columns: 1fr; gap: 0.6rem; }
+  }
+</style>

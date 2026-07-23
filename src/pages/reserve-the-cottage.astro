@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { SITE } from '../data/site.js';
+const title = 'Reserve the Cottage — Daisy Cottage | Cape Cod Vacation Rental';
+const description = "If you're ready to reserve the cottage for your vacation on the Cape, get in touch with us as soon as possible. There are several ways to book.";
+---
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1>Reserve the Cottage</h1>
+      <p><strong>Daisy Cottage is available to rent by the week during the Summer season of 2026.</strong></p>
+      <p>Currently, the best way to check availability for <em>Daisy</em>, Cottage #1 of the Days&rsquo; Cottages, is to contact me using the form below <em>or</em> by going directly to the <a href={SITE.airbnb} target="_blank" rel="noopener">Airbnb</a> page.</p>
+      <p class="text-center" style="margin-top:2rem">
+        <a class="btn" href={SITE.airbnb} target="_blank" rel="noopener">Book Through Airbnb</a>
+      </p>
+      <ContactForm name="reserve" heading="Book directly by contacting me via the form below" />
+    </div>
+  </section>
+</Base>

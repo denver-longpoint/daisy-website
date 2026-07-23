@@ -1,0 +1,24 @@
+# Netlify 301 redirects — preserve SEO from the old Squarespace URL structure.
+# Format: /old-path  /new-path  301
+
+# Homepage stacked-index section URLs -> homepage anchors
+/info                       /                 301
+/daisycottage               /                 301
+/amenities                  /#amenities       301
+/provincetown               /#provincetown    301
+/cape-cod-sunset-webcam     /#webcam          301
+
+# Empty placeholder / removed pages -> home
+/new-page                   /                 301
+/new-page-2                 /                 301
+/new-page-3                 /                 301
+/new-page-4                 /                 301
+/new-page-5                 /                 301
+/new-page-42                /                 301
+/new-page-62                /                 301
+/new-page-73                /                 301
+/provincetown-harbor-webcam /                 301
+/5-east-end-1               /                 301
+/23-sackett-way             /                 301
+/read-me-bryant             /                 301
+/18-sackett-way-bryant      /                 301

@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+const title = "The Seawall at Days’ Cottages — Daisy Cottage | Cape Cod Vacation Rental";
+const description = 'A December 2022 storm hit the 800-foot seawall protecting the Days’ Cottages on Beach Point — a reminder of how powerful the weather off Cape Cod Bay can be.';
+---
+<Base title={title} description={description}>
+  <article class="section">
+    <div class="container">
+      <p class="eyebrow"><a href="/daisy-cottage-news">&larr; News &amp; Blog</a></p>
+      <h1>The Seawall at Days&rsquo; Cottages</h1>
+      <p>The view of the bay is pretty hard to get over&mdash;endless blue water, shifting sands, and the sound of waves rolling in. If you&rsquo;ve ever stayed at one of the Days' Cottages, you know how much the weather over the Cape Cod Bay shapes the day.</p>
+      <p><strong>This storm in 2022 came a few days before Christmas and was another reminder of how powerful the weather off the bay can be.</strong> As the wind howled and waves crashed, the 800-foot seawall&mdash;really, the first and only line of defense&mdash;took a direct hit. The buttresses absorbed the brunt of it, but sections of the seawall suffered damage.</p>
+      <p>Other than some missing siding from some of the cottages, Daisy included, and some overturned adirondack chairs, the cottages remained undamaged. It still boggles my mind to consider these cottages have endured storms like this for nearly 100 years. Unfortunately, repairs to the seawall were needed in the spring.</p>
+      <p>Check out the video clips from the storm below. The sea certainly put up a fight this time!</p>
+      <!-- TODO: original post embedded Instagram video clips of the storm. Paste the Instagram/YouTube embed code here. -->
+      <p class="todo">[ Storm video clips — Instagram embeds to be added ]</p>
+    </div>
+  </article>
+</Base>
+<style>
+  .eyebrow a { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; text-decoration: none; }
+  .todo { color: var(--color-muted); font-style: italic; border: 1px dashed var(--color-line); padding: 1.5rem; text-align: center; }
+</style>

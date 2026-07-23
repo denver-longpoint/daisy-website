@@ -1,0 +1,29 @@
+---
+// Netlify-powered contact form. Submissions appear in the Netlify dashboard
+// and can be forwarded to email via Netlify > Forms > notifications.
+const { name = 'contact', heading } = Astro.props;
+---
+<form name={name} method="POST" data-netlify="true" netlify-honeypot="bot-field" class="cform">
+  <input type="hidden" name="form-name" value={name} />
+  <p class="cform__hp"><label>Skip: <input name="bot-field" /></label></p>
+  {heading && <h3>{heading}</h3>}
+  <div class="cform__row">
+    <input type="text" name="Name" placeholder="Name" aria-label="Name" required />
+    <input type="email" name="Email" placeholder="Email" aria-label="Email" required />
+  </div>
+  <input type="text" name="Phone" placeholder="Phone (optional)" aria-label="Phone" />
+  <textarea name="Message" placeholder="Message" aria-label="Message" rows="5" required></textarea>
+  <button type="submit" class="btn">Send</button>
+</form>
+
+<style>
+  .cform { max-width: 640px; margin: 1.5rem auto 0; text-align: left; }
+  .cform__hp { display: none; }
+  .cform__row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .cform input, .cform textarea {
+    width: 100%; padding: 0.9rem 1rem; margin-bottom: 0.9rem;
+    border: 1px solid var(--color-line); font-family: var(--font-body); font-size: 1rem; background: #fff;
+  }
+  .cform textarea { resize: vertical; }
+  @media (max-width: 600px) { .cform__row { grid-template-columns: 1fr; } }
+</style>

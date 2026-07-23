@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+const title = 'Cottage Remodel Project — Daisy Cottage | Cape Cod Vacation Rental';
+const description = 'How we renovated the interior of Daisy Cottage after buying it in 2016 — brighter and more open, while keeping the beloved painted chimney exactly as it was.';
+---
+<Base title={title} description={description} image="/images/Daisy Cottage 1930s.jpg">
+  <article class="section">
+    <div class="container">
+      <p class="eyebrow"><a href="/daisy-cottage-news">&larr; News &amp; Blog</a></p>
+      <h1>Our Daisy Cottage Interior Renovation</h1>
+      <figure>
+        <img src="/images/Daisy Cottage 1930s.jpg" alt="Daisy Cottage sometime in the late 1930s" loading="lazy" />
+        <figcaption>Daisy Cottage sometime in the late 1930s</figcaption>
+      </figure>
+      <p>Until 2016, all of the cottages were owned by the Days Family and rented out during the summer months. For decades, families have returned to the Cape to enjoy their week on the beach.</p>
+      <p>As the artistic evidence on our chimney bricks shows, there are several families who have been coming back to Daisy yearly for half a century.</p>
+      <p>After purchasing Daisy from Joe and Cindy Days in 2016, we decided to update the interior of the cottage. We wanted it to be more open, brighter, and cheerful. We also wanted the cottage to feel familiar to all the families who&rsquo;d been coming year after year. That was one of the reasons we decided to keep the painted chimney exactly the way it was.</p>
+      <p>My father has renovated hundreds of homes during his lifetime on the Cape and agreed to help us out with the remodel. In early spring of 2017, we started the project. The remodel was completed within hours of the first renters showing up for the summer season!</p>
+      <p>Here are some clips we put together that show what the cottage looked like before the remodel and how it looked just before the first family of the season arrived.</p>
+      <!-- TODO: original post embedded before/after video clips. Paste the Instagram/YouTube embed code here. -->
+      <p class="todo">[ Before / after remodel video clips — embeds to be added ]</p>
+    </div>
+  </article>
+</Base>
+<style>
+  .eyebrow a { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; text-decoration: none; }
+  figure { margin: 0 0 1.5rem; }
+  figcaption { color: var(--color-muted); font-style: italic; font-size: 0.92rem; margin-top: 0.5rem; }
+  .todo { color: var(--color-muted); font-style: italic; border: 1px dashed var(--color-line); padding: 1.5rem; text-align: center; }
+</style>

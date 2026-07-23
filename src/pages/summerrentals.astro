@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { SITE } from '../data/site.js';
+const title = 'Summer Season — Daisy Cottage | Cape Cod Vacation Rental';
+const description = "We're now taking reservations for the summer season at Daisy Cottage on Beach Point in North Truro, Cape Cod.";
+---
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1>Summertime rentals on the Cape</h1>
+      <p>Many of the families that spend time at the Days&rsquo; Cottages have been coming to Beach Point since the cottages were built in the 1930s. In fact, many families that stay at Daisy have been coming every year for the last 50+ years!</p>
+      <h2 class="mt">Daisy Cottage goes fast!</h2>
+      <p>If you're interested in reserving the cottage, we recommend you do so sooner than later. The best way to check availability and/or book is <a href={SITE.airbnb} target="_blank" rel="noopener">through Airbnb</a> or by emailing us directly. We can be reached at <a href={`mailto:${SITE.email}`}>{SITE.email}</a> or by using the form below.</p>
+      <ContactForm name="summer" />
+    </div>
+  </section>
+</Base>
+<style>h2.mt{margin-top:2.5rem}</style>

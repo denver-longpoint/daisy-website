@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+const title = 'Short Term Rental — Daisy Cottage | Cape Cod Vacation Rental';
+const description = 'Daisy Cottage is available as an off-season short-term monthly rental in Truro, MA — fully furnished, all utilities paid. Perfect for artists, writers, and professionals.';
+---
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1>Short Term Rental in Truro, MA</h1>
+      <p>Daisy Cottage will soon be available as a short term rental option for individuals looking for an off-season getaway on the Cape. It will be available to rent on a minimum monthly basis.</p>
+      <p>This is the perfect cottage for artists, writers, and professionals who&rsquo;d like a winter getaway. It&rsquo;s turnkey and ready for your stay.</p>
+      <h2 class="mt">Our cottage is now available as a winter rental.</h2>
+      <p>If you&rsquo;re interested in renting a fully-furnished, all-utilities-paid cottage on the Cape during the fall or winter, please contact us as soon as possible.</p>
+      <p>For rentals over 1 month in duration, we require the following before moving in:</p>
+      <ul>
+        <li>Completed Rental Application</li>
+        <li>Signed Rental Agreement &amp; Lease</li>
+        <li>Security Deposit</li>
+      </ul>
+      <ContactForm name="short-term" />
+    </div>
+  </section>
+</Base>
+<style>h2.mt{margin-top:2.5rem}</style>

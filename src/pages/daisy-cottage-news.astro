@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+const title = 'News & Blog — Daisy Cottage | Cape Cod Vacation Rental';
+const description = "Here's the latest news from the Daisy Cottage, one of the iconic Days' Cottages in Truro, Massachusetts.";
+const posts = [
+  { title: 'Winterizing the Cottage', href: '/winterizing-daisy-cottage', thumb: 'snowy-cottage.jpeg',
+    excerpt: "There’s something magical about being on Beach Point during the winter. Here’s how we prepared Daisy for year-round living on the Cape." },
+  { title: "The Seawall at Days’ Cottages", href: '/seawall-days-cottages', thumb: 'stormy-skies-at-beach-point.jpeg',
+    excerpt: "A December 2022 storm was another reminder of how powerful the weather off Cape Cod Bay can be — and how the 800-foot seawall protects the cottages." },
+  { title: 'Our Daisy Cottage Interior Renovation', href: '/daisy-remodel-project', thumb: 'daisy-cottage-renovation.jpeg',
+    excerpt: "After purchasing Daisy in 2016, we updated the interior to be more open, brighter, and cheerful — while keeping the painted chimney exactly as it was." },
+];
+---
+<Base title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1>News &amp; Blog</h1>
+      <p>Here's the latest news from the Daisy Cottage, one of the iconic Days&rsquo; Cottages in Truro, Massachusetts.</p>
+      <div class="posts">
+        {posts.map((p) => (
+          <a class="post" href={p.href}>
+            <img src={`/images/${p.thumb}`} alt={p.title} loading="lazy" />
+            <h2>{p.title}</h2>
+            <p>{p.excerpt}</p>
+            <span class="post__more">Read more &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 2.5rem; }
+  .post { text-decoration: none; color: inherit; display: block; }
+  .post img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+  .post h2 { font-size: 1.35rem; margin: 1rem 0 0.5rem; }
+  .post p { color: var(--color-text); }
+  .post__more { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--color-dark); }
+</style>

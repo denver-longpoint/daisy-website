@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+const title = 'Winterizing the Cottage — Daisy Cottage | Cape Cod Vacation Rental';
+const description = 'How we prepared Daisy Cottage for year-round living on Beach Point — insulation, new siding, and efficient windows for winters on Cape Cod.';
+const gallery = ['nighttime-photography-days-cottages.jpeg','snowy-cottage.jpeg','icy-shore-road-truro.jpeg','cold-night-at-daisy-cottage.jpeg','lobster-trap-christmas-tree.jpeg','fireplace-inside-daisy-cottage.jpeg','daisy-cottage-renovation.jpeg','daisy-cottage-ceiling-renovation.jpeg','snow-on-beach-point.jpeg','residing-project-daisy-cottage Large.jpeg','snowman-at-days-cottages.jpeg','daisy-cottage-at-night.jpeg'];
+const alt = (f) => f.replace(/\.[^.]+$/, '').replace(/-/g,' ');
+---
+<Base title={title} description={description} image="/images/snowy-cottage.jpeg">
+  <article class="section">
+    <div class="container">
+      <p class="eyebrow"><a href="/daisy-cottage-news">&larr; News &amp; Blog</a></p>
+      <h1>Winterizing the Cottage</h1>
+      <p>While we definitely love being on the Cape during the summer months, there&rsquo;s something magical about being on Beach Point during the winter. Whether you are a writer or just need an escape from the city, it's a great place to be. It has a different vibe, perfect for those who enjoy quiet time.</p>
+      <p><strong>In October 2021, the Town of Truro approved year-round occupancy for condominiums in town.</strong> This means that the Days&rsquo; Cottages can now be occupied through the winter.</p>
+      <p>To gain approval, we had to demonstrate to the town that the cottage was properly prepared for enduring the cold weather that hits Beach Point during the winter months.</p>
+      <p>We insulated the exterior walls and the crawl space under the cottage with spray foam insulation, insulated the ceiling and extended the chimney brick up to the ceiling. We also replaced the bayside windows with more efficient ones, and, in the process, sealed off all those drafty spaces from the wind coming off the bay. Of course, we insulate the pipes under the cottage too.</p>
+      <p><strong>The biggest improvement, however, was replacing all of the siding on the cottage.</strong> We got rid of the old, damaged, and brittle vinyl siding that was installed sometime in the late 80s (?) and replaced it with long-lasting, fire-resistant hardieboard.</p>
+      <p>All of this just ensures that we can be comfortable and cozy throughout the winter. Although the cottages were not originally built for winter occupancy, I am glad the town finally allowed us to stay year-round.</p>
+      <p>If you're interested in spending time in the cottage during the winter and seeing what winter is like on the Cape, let me know.</p>
+    </div>
+    <div class="container gallery-masonry">
+      {gallery.map((f) => <img src={`/images/${f}`} alt={alt(f)} loading="lazy" />)}
+    </div>
+  </article>
+</Base>
+<style>
+  .eyebrow a { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; text-decoration: none; }
+  .gallery-masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.9rem; margin-top: 2rem; }
+  .gallery-masonry img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+</style>

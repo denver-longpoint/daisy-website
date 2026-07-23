@@ -1,0 +1,14 @@
+{
+  "name": "daisy-website",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Daisy Cottage — Cape Cod vacation rental. Static site (Astro), replacing Squarespace.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.15.0"
+  }
+}

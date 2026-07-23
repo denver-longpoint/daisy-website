@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+const title = 'Photos of Cape Cod — Daisy Cottage | Cape Cod Vacation Rental';
+const description = 'We take lots of photos! Here are some of our photographs from Beach Point, Truro, and Provincetown.';
+const gallery = [
+  'beautiful-provincetown-sunset.png','banner-plane-over-truro.jpeg','cape-cod-family-vacation-rental.jpeg','pilgrim-monument-provincetown.jpg','identical-cottages-truro.jpg','beachfront-days-cottages.jpeg','old-boat-daisy-cottage.jpg','cape-cod-winter-getaway.jpeg','clothesline-daisy-cottage.jpeg','sailboat-on-beach-point.jpg','beach-rocks-daisy-cottage.jpeg','commercial-street-from-pilgrim-monument.jpeg','sailing-at-days-cottages.jpg','scuba-diving-truro.jpg','kayaking-at-days-cottages.jpg','days-cottages-rentals.jpeg','seagull-at-macmillan-wharf.jpg','early-morning-light-days-cottages.jpeg','fall-beach-rental-truro-massachusetts.png','windy-at-provincetown-harbor.jpg','fishing-boat-daisy-cottage.jpeg','kayaks-provincetown-bay.jpeg','lobster-pot-christmas-tree-provincetown.jpeg','off-season-cape-cod-rental.png','pigeons-on-macmillan-wharf.jpeg','provincetown-town-hall.jpeg','seagull-beach-point-ma.jpeg','stormy-skies-at-beach-point.jpeg','summer-thunderstorm-days-cottage.jpeg','sunset-provincetown-harbor.jpeg','the-penny-patch-provincetown.jpeg','writers-retreat-cape-cod-ma.jpeg','aerial-view-of-cape-cod.jpeg','cape-air-over-race-point-road.jpeg','beach-at-days-cottages.jpeg','beach-fire-at-days-cottages.jpeg','days-cottages-historic-house.jpeg','fresh-picked-cranberries.jpeg','lewis-brothers-ice-cream.jpeg','hms-somerset-shipwreck.jpeg','horseshoe-crab-days-cottages.jpeg','old-colony-tap-provincetown.jpeg','old-bottle-found-on-beach.jpeg','portuguese-dancers-commercial-street.jpeg','route-6a-sign.jpeg','salty-market-shore-road.jpeg','tree-house-brewery-glass.jpeg','walking-commercial-street-provincetown.jpeg','whale-watching-in-provincetown.jpeg','summer-sailing-cape-cod.jpeg','thunderstorm-over-provincetown.jpeg',
+];
+const alt = (f) => f.replace(/\.[^.]+$/, '').replace(/-/g, ' ');
+---
+<Base title={title} description={description} image="/images/beautiful-provincetown-sunset.png">
+  <section class="section">
+    <div class="container">
+      <h1>Photographs of Cape Cod</h1>
+      <p>Welcome to my little collection of Cape Cod moments&mdash;golden sunsets, seagulls, and salty breezes. Whether you're dreaming of a cozy beach escape or reminiscing about past summers by the sea, these photos capture the magic of life at Daisy Cottage and our favorite parts of the Cape.</p>
+      <p>We take A LOT of photographs!</p>
+      <p><strong>What You'll Find in This Gallery:</strong></p>
+      <p>🏡 Beachfront Views &ndash; Because waking up to the sites and sounds of the ocean never gets old.</p>
+      <p>🌅 Epic Sunsets &ndash; If you've watched sunsets from Beach Point, you know they deserves their own own section.</p>
+      <p>⛵ Boats &amp; Harbors &ndash; The lifeblood of this place, from tiny dinghies to proud fishing vessels at Macmillan Wharf.</p>
+      <p>🏖 Seaside Living &ndash; Mostly just pictures of the Days&rsquo; Cottages, weathered and all &mdash; looking like they have since 1931.</p>
+      <p>🍂 Cape Cod in Every Season &ndash; Summer is legendary, but fall, winter, and spring have their own magic, too.</p>
+      <p>Take a look around, and if you love what you see, come experience it for yourself. Get in touch with me. There&rsquo;s nothing quite like Cape Cod!</p>
+    </div>
+    <div class="container gallery-masonry">
+      {gallery.map((f) => <img src={`/images/${f}`} alt={alt(f)} loading="lazy" />)}
+    </div>
+  </section>
+</Base>
+<style>
+  .gallery-masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.9rem; margin-top: 2rem; }
+  .gallery-masonry img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+</style>
