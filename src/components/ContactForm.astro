@@ -1,10 +1,11 @@
 ---
 // Netlify-powered contact form. Submissions appear in the Netlify dashboard
 // and can be forwarded to email via Netlify > Forms > notifications.
-const { name = 'contact', heading } = Astro.props;
+const { name = 'contact', heading, subject } = Astro.props;
 ---
 <form name={name} method="POST" data-netlify="true" netlify-honeypot="bot-field" class="cform">
   <input type="hidden" name="form-name" value={name} />
+  {subject && <input type="hidden" name="subject" value={subject} />}
   <p class="cform__hp"><label>Skip: <input name="bot-field" /></label></p>
   {heading && <h3>{heading}</h3>}
   <div class="cform__row">
