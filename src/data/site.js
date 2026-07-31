@@ -24,7 +24,7 @@ export const NAV = [
       { label: 'Reserve the Cottage', href: '/reserve-the-cottage' },
       { label: 'Summer Season', href: '/summerrentals' },
       { label: 'Short Term Rental', href: '/short-term-rental' },
-      { label: 'Rental Rates', href: '/rent-daisy-cottage' },
+      { label: 'Rates & Booking', href: '/rent-daisy-cottage' },
       { label: 'House Rules', href: '/house-rules' },
     ],
   },
